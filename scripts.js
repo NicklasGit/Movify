@@ -38,7 +38,7 @@ async function fetchOmdb(i){
   const firstresponse = await fetch('./movies.json')
   const jsonobj = await firstresponse.json()
   // We then take our the title from our json data, and use it to fetch data from OMDB about the film.
-  const response = await fetch('http://www.omdbapi.com/?apikey=37ab123e&t='+jsonobj.fav_movies[i].title)
+  const response = await fetch('https://www.omdbapi.com/?apikey=37ab123e&t='+jsonobj.fav_movies[i].title)
   const obj = await response.json()  
   // In the html, for each button is a div with class player. This div mark where we intend to make a 
   // YT player, which is done below. Here we also use the YT id from the json file.
